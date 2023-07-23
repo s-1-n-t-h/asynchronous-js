@@ -18,10 +18,10 @@ console.log("before");
 //     },
 // );
 getUser(1)
-        .then((user) => getRepositories(user.gitHubUserName))
-        .then((repos) => getCommits(repos[0]))
-        .then((commits) => console.log("\ncommits: ", commits))
-        .catch((err) => console.log("Error: ",err.message))
+        .then(user => getRepositories(user.gitHubUserName))
+        .then(repos => getCommits(repos[0]))
+        .then(commits => console.log("\ncommits: ", commits))
+        .catch(err => console.log("Error: ",err.message))
 
 console.log("after");
 
